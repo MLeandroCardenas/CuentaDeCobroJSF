@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Formulario cliente</title>
+    </h:head>
+    <h:body>
+        <div class="formularioUsuario">
+            <h:form>
+                <h1>Cuenta de cobro</h1>
+                <fieldset>
+                        <legend>Informacion personal</legend>
+                        <h:outputText value="Nombre: "></h:outputText> 
+                        <h:inputText id="nombre" value="#{formulario.nombre}" required="true">
+                            <f:validateLength minimum="4" maximum="30"></f:validateLength>
+                            <f:validateRegex pattern="[a-zA-Z]+"/>
+                        </h:inputText>
+                        &nbsp; &nbsp; &nbsp;
+                        <h:message for="nombre" style="color: red"></h:message >
+                        <br></br> <br></br>
+                        <h:outputText value="Apellido: "></h:outputText>   
+                        <h:inputText id="apellido" value="#{formulario.apellido}" required="true">
+                            <f:validateLength minimum="4" maximum="30"></f:validateLength>
+                            <f:validateRegex pattern="[a-zA-Z]+"/>
+                        </h:inputText>
+                        &nbsp; &nbsp; &nbsp;
+                        <h:message for="apellido" style="color: red"></h:message >
+                        <br></br> <br></br>
+                        <h:outputText value="Genero " />
+                        <h:selectOneMenu value="#{formulario.genero}" >
+                        <f:selectItem itemValue="masculino" itemLabel="Hombre" />
+                        <f:selectItem itemValue="femenino" itemLabel="Mujer" />
+                    </h:selectOneMenu>
+                    <br></br> <br></br>
+                    <h:outputText value="Ubicacion "></h:outputText>
+                    <h:selectOneMenu value="#{formulario.ubicacion}" >
+                        <f:selectItem itemValue="facatativa" itemLabel="Facatativa" />
+                        <f:selectItem itemValue="afueras" itemLabel="Afueras" />
+                    </h:selectOneMenu>
+                </fieldset>
+                
+                <br></br> <br></br>
+                
+                <fieldset>
+                        <legend>Experiencia</legend>
+                        <h:outputText value="Profesion "></h:outputText>
+                        <h:selectOneMenu value="#{formulario.profesiones}" >
+                            <f:selectItem itemValue="ingeniero" itemLabel="Ingeniero" />
+                            <f:selectItem itemValue="tecnologo" itemLabel="Tecnologo" />
+                            <f:selectItem itemValue="tecnico" itemLabel="Tecnico" />
+                            <f:selectItem itemValue="auxliar" itemLabel="Auxiliar" />
+                        </h:selectOneMenu>
+                        <br></br><br></br><br></br>
+                    <h:outputText value="Idiomas " />
+                    <h:selectManyCheckbox value="#{formulario.idiomas}" >
+                        <f:selectItem itemValue="Ingles" itemLabel="Ingles" />
+                        <f:selectItem itemValue="Frances" itemLabel="Frances" />
+                        <f:selectItem itemValue="Aleman" itemLabel="Aleman" />
+                    </h:selectManyCheckbox>
+                    <br></br>
+                    <h:outputText value="Dias de trabajo: "></h:outputText> 
+                    <h:inputText id="dias" value="#{formulario.diasLaborados}" required="true">
+                        <f:validateLongRange minimum="1"></f:validateLongRange>
+                    </h:inputText>
+                    &nbsp; &nbsp; &nbsp;
+                        <h:message for="dias" style="color: red"></h:message >
+                </fieldset>
+                <br></br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;
+                <h:commandButton value="Enviar" action="#{formulario.redireccionar()}" />
+            </h:form>
+        </div>
+    </h:body>
+</html>

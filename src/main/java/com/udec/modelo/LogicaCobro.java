@@ -68,6 +68,14 @@ public class LogicaCobro {
             resultado = formulario.getDiasLaborados()*200000+330000+80000;
         else if(formulario.getIdiomas().equals("Aleman") && formulario.getProfesiones().equals("ingeniero") && formulario.getUbicacion().equals("afueras"))
             resultado = formulario.getDiasLaborados()*200000+500000+80000;  
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Ingles")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("ingeniero"))
+            resultado = formulario.getDiasLaborados()*200000+250000+500000+80000;
+         
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("ingeniero") )
+            resultado = formulario.getDiasLaborados()*200000+330000+500000+80000;
+         
+         else if(formulario.getIdiomas().equals("Ingles") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("ingeniero") )
+            resultado = formulario.getDiasLaborados()*200000+250000+330000+80000;
           return resultado;
     }
     
@@ -77,7 +85,16 @@ public class LogicaCobro {
         else if(formulario.getIdiomas().equals("Frances") && formulario.getProfesiones().equals("tecnologo") && formulario.getUbicacion().equals("afueras"))
             resultado = formulario.getDiasLaborados()*150000+330000+80000;
         else if(formulario.getIdiomas().equals("Aleman") && formulario.getProfesiones().equals("tecnologo") && formulario.getUbicacion().equals("afueras"))
-            resultado = formulario.getDiasLaborados()*150000+500000+80000;   
+            resultado = formulario.getDiasLaborados()*150000+500000+80000;
+        
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Ingles")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("tecnologo"))
+            resultado = formulario.getDiasLaborados()*150000+250000+500000+80000;
+         
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("tecnologo") )
+            resultado = formulario.getDiasLaborados()*150000+330000+500000+80000;
+         
+         else if(formulario.getIdiomas().equals("Ingles") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("tecnologo") )
+            resultado = formulario.getDiasLaborados()*150000+250000+330000+80000;
          
          return resultado;
     }
@@ -89,16 +106,35 @@ public class LogicaCobro {
             resultado = formulario.getDiasLaborados()*100000+330000+80000;
         else if(formulario.getIdiomas().equals("Aleman") && formulario.getProfesiones().equals("tecnico") && formulario.getUbicacion().equals("afueras"))
             resultado = formulario.getDiasLaborados()*100000+500000+80000; 
+         
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Ingles")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("tecnico"))
+            resultado = formulario.getDiasLaborados()*100000+250000+500000+80000;
+         
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("tecnico") )
+            resultado = formulario.getDiasLaborados()*100000+330000+500000+80000;
+         
+         else if(formulario.getIdiomas().equals("Ingles") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("tecnico") )
+            resultado = formulario.getDiasLaborados()*100000+250000+330000+80000;
          return resultado;
     }
     
     public int sueldoAuxiliarIngles(){
           if(formulario.getIdiomas().equals("Ingles") && formulario.getProfesiones().equals("auxiliar") && formulario.getUbicacion().equals("afueras"))
-            resultado = formulario.getDiasLaborados()*100000+250000+80000;
+            resultado = formulario.getDiasLaborados()*50000+250000+80000;
         else if(formulario.getIdiomas().equals("Frances") && formulario.getProfesiones().equals("auxiliar") && formulario.getUbicacion().equals("afueras"))
-            resultado = formulario.getDiasLaborados()*100000+330000+80000;
+            resultado = formulario.getDiasLaborados()*50000+330000+80000;
         else if(formulario.getIdiomas().equals("Aleman") && formulario.getProfesiones().equals("auxiliar") && formulario.getUbicacion().equals("afueras"))
-            resultado = formulario.getDiasLaborados()*100000+500000+80000;  
+            resultado = formulario.getDiasLaborados()*50000+500000+80000;  
+          
+        
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Ingles")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("auxiliar"))
+            resultado = formulario.getDiasLaborados()*50000+250000+500000+80000;
+         
+        else if(formulario.getIdiomas().equals("Aleman") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("auxiliar") )
+            resultado = formulario.getDiasLaborados()*50000+330000+500000+80000;
+         
+         else if(formulario.getIdiomas().equals("Ingles") && formulario.getIdiomas().equals("Frances")&& formulario.getUbicacion().equals("afueras") && formulario.getProfesiones().equals("auxiliar") )
+            resultado = formulario.getDiasLaborados()*50000+250000+330000+80000;
           
           return resultado;
     }
@@ -176,7 +212,7 @@ public class LogicaCobro {
           
           return resultado;
     }
-    
+
     
     public Formulario getFormulario() {
         return formulario;

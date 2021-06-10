@@ -12,13 +12,11 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.projectKey>MLeandroCardenas_CuentaDeCobroJSF</sonar.projectKey>
+        <sonar.organization>mleandrocardenas</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
-    
-    <properties>
-          <sonar.projectKey>MLeandroCardenas_CuentaDeCobroJSF</sonar.projectKey>
-          <sonar.organization>mleandrocardenas</sonar.organization>
-          <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties>
+   
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
